@@ -30,7 +30,7 @@ int main (int argc, char * argv[])
         converter = far2cel;
     } else {
         fprintf(stderr, "Error: unexpected program name.\n");
-        exit(0);
+        return 1;
     }
 
     for (i = 1; i < argc; i++) {
