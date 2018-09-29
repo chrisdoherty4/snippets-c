@@ -18,7 +18,7 @@ int main (int argc, char * argv[])
         return 1;
     };
 
-    // Extract the program nae from the path
+    // Extract the program name from the path
     program = argv[0];
     if ((slash = strrchr(argv[0], '/')) != NULL) {
         program = slash + 1;
