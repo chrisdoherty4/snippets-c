@@ -2,16 +2,18 @@
 #include <string.h>
 #include <stdbool.h>
 
-#define DOUBLE_SPACE "  "
-
 int main(int argc, char *argv[])
 {
-    char *test_string = "This is  a test    string      with some   added spaces";
+    if (argc != 2) {
+        fpritnf(stderr, "Error: expeting argument 1 to be a test string");
+    }
 
+    char *test_string = argv[1];
     int string_len = strlen(test_string) + 1, i = 0;
     char buffer[string_len];
     bool found_space = false;
 
+    // Manually initialise memory of dynamically defined buffer.
     memset(buffer, 0, string_len);
 
     printf("Original: %s\n", test_string);
