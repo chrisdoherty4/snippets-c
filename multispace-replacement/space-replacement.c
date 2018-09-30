@@ -5,7 +5,8 @@
 int main(int argc, char *argv[])
 {
     if (argc != 2) {
-        fpritnf(stderr, "Error: expeting argument 1 to be a test string");
+        fprintf(stderr, "Error: expeting argument 1 to be a test string");
+        return 1;
     }
 
     char *test_string = argv[1];
@@ -34,4 +35,6 @@ int main(int argc, char *argv[])
     buffer[i] = '\0';
 
     printf("Triaged: %s\n", buffer);
+
+    return 0;
 }
