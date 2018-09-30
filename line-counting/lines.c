@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <errno.h>
+#include <string.h>
 
 int main (int argc, char *argv[])
 {
@@ -14,7 +16,7 @@ int main (int argc, char *argv[])
     fh = fopen(argv[1], "r");
 
     if (fh == NULL) {
-        fprintf(stderr, "Error: failed to open file\n");
+        fprintf(stderr, "Error opening file: %s\n", strerror(errno));
         return 1;
     }
 
