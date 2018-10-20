@@ -3,7 +3,6 @@
 #include <assert.h>
 
 bool isPrime(long long n);
-long long floorSqrt(long long x);
 
 long long* gap(int g, long long m, long long n)
 {
