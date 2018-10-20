@@ -1,7 +1,6 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <assert.h>
-#include <stdio.h>
 
 bool isPrime(long long n);
 long long floorSqrt(long long x);
